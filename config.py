@@ -8,7 +8,6 @@ class Config(object):
 class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
-    #postgres://grocery_store_2_db_user:Fhs6MFOexDJsyW6W9pxnAIfUKsc9HxF4@dpg-cmfets0cmk4c739a65rg-a.singapore-postgres.render.com/grocery_store_2_db
     SECRET_KEY = "thisissecter1"
     SECURITY_PASSWORD_SALT = "thisissaltt1"
     SQLALCHEMY_TRACK_MODIFICATIONS = False

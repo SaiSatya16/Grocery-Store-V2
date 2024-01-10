@@ -23,6 +23,7 @@ Flask-Security-Too==5.1.2
 Flask-SQLAlchemy==3.0.3
 Flask-WTF==1.1.1
 greenlet==2.0.2
+gunicorn==21.2.0
 idna==3.4
 importlib-metadata==6.0.0
 itsdangerous==2.1.2
@@ -30,6 +31,7 @@ Jinja2==3.1.2
 kombu==5.3.3
 lml==0.1.0
 MarkupSafe==2.1.2
+packaging==23.2
 passlib==1.7.4
 Pillow==10.1.0
 prompt-toolkit==3.0.40

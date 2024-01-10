@@ -26,7 +26,8 @@ def any_role_required(*roles):
 #==========================Validation========================================================
 class NotFoundError(HTTPException):
     def __init__(self,status_code):
-        self.response = make_response(" ", status_code)
+        message = {"error_code":"BE1009","error_message":"Not Found"}
+        self.response = make_response(json.dumps(message), status_code)
 
 class BusinessValidationError(HTTPException):
     def __init__(self, status_code, error_code, error_message):
