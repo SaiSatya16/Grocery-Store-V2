@@ -1,0 +1,352 @@
+swagger: '2.0'
+info:
+  title: Grocery Store RESTful API
+  description: Grocery Store V2 RESTful API MAD 2 Project
+  version: 1.0.0
+basePath: /
+tags:
+  - name: Category
+    description: Operations related to categories
+  - name: Product
+    description: Operations related to products
+  - name: Cart
+    description: Operations related to the shopping cart
+  - name: Bought
+    description: Operations related to purchased items
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /api/category:
+    get:
+      tags:
+        - Category
+      summary: Get all categories
+      security:
+        - token: []
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Category'
+    post:
+      tags:
+        - Category
+      summary: Create a category
+      security:
+        - token: []
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/NewCategory'
+      responses:
+        '201':
+          description: Category created
+          schema:
+            $ref: '#/definitions/Category'
+        '400':
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+  /api/category/{id}:
+    put:
+      tags:
+        - Category
+      summary: Update a category by ID
+      security:
+        - token: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/UpdateCategory'
+      responses:
+        '200':
+          description: Category updated successfully
+          schema:
+            $ref: '#/definitions/Category'
+        '400':
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+        '404':
+          description: Not found
+          schema:
+            $ref: '#/definitions/NotFound'
+    delete:
+      tags:
+        - Category
+      summary: Delete a category by ID
+      security:
+        - token: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+      responses:
+        '201':
+          description: Category deleted successfully
+        '404':
+          description: Not found
+          schema:
+            $ref: '#/definitions/NotFound'
+  /api/product:
+    get:
+      tags:
+        - Product
+      summary: Get all products
+      security:
+        - token: []
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Product'
+    post:
+      tags:
+        - Product
+      summary: Create a product
+      security:
+        - token: []
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/NewProduct'
+      responses:
+        '201':
+          description: Product created
+          schema:
+            $ref: '#/definitions/Product'
+        '400':
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+  /api/product/{id}:
+    put:
+      tags:
+        - Product
+      summary: Update a product by ID
+      security:
+        - token: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/UpdateProduct'
+      responses:
+        '200':
+          description: Product updated successfully
+          schema:
+            $ref: '#/definitions/Product'
+        '400':
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+        '404':
+          description: Not found
+          schema:
+            $ref: '#/definitions/NotFound'
+  /api/cart:
+    get:
+      tags:
+        - Cart
+      summary: Get user's cart items
+      security:
+        - token: []
+      parameters:
+        - name: id
+          in: query
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Cart'
+    post:
+      tags:
+        - Cart
+      summary: Add an item to the cart
+      security:
+        - token: []
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/NewCartItem'
+      responses:
+        '201':
+          description: Item added to cart
+          schema:
+            $ref: '#/definitions/Cart'
+        '400':
+          description: Bad request
+          schema:
+            $ref: '#/definitions/BadRequest'
+  /api/bought/{id}:
+    get:
+      tags:
+        - Bought
+      summary: Get purchased items by user ID
+      security:
+        - token: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Cart'
+definitions:
+  Category:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      active:
+        type: boolean
+  NewCategory:
+    type: object
+    properties:
+      name:
+        type: string
+      active:
+        type: boolean
+  UpdateCategory:
+    type: object
+    properties:
+      name:
+        type: string
+      active:
+        type: boolean
+  Product:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      unit:
+        type: string
+      rate:
+        type: integer
+      quantity:
+        type: integer
+      manufacture_date:
+        type: string
+      expiry_date:
+        type: string
+      category_id:
+        type: integer
+  NewProduct:
+    type: object
+    properties:
+      name:
+        type: string
+      unit:
+        type: string
+      rate:
+        type: integer
+      quantity:
+        type: integer
+      manufacture_date:
+        type: string
+      expiry_date:
+        type: string
+      category_id:
+        type: integer
+  UpdateProduct:
+    type: object
+    properties:
+      name:
+        type: string
+      unit:
+        type: string
+      rate:
+        type: integer
+      quantity:
+        type: integer
+      manufacture_date:
+        type: string
+      expiry_date:
+        type: string
+      category_id:
+        type: integer
+  Cart:
+    type: object
+    properties:
+      id:
+        type: integer
+      user_id:
+        type: integer
+      product_id:
+        type: integer
+      product_name:
+        type: string
+      req_quantity:
+        type: integer
+      product_rate:
+        type: integer
+      product_unit:
+        type: string
+  NewCartItem:
+    type: object
+    properties:
+      user_id:
+        type: integer
+      product_id:
+        type: integer
+      product_name:
+        type: string
+      req_quantity:
+        type: integer
+      product_rate:
+        type: integer
+      product_unit:
+        type: string
+  NotFound:
+    type: object
+    properties:
+      error_code:
+        type: string
+      error_message:
+        type: string
+  BadRequest:
+    type: object
+    properties:
+      error_code:
+        type: string
+      error_message:
+        type: string
