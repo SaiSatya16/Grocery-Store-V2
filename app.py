@@ -19,6 +19,7 @@ import flask_excel as excel
 from celery.schedules import crontab
 from mailservice import send_message
 from flask_mail import Message
+from psycopg2 import *
 
 
 #==============================configuration===============================

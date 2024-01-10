@@ -1,5 +1,5 @@
 const Navbar = Vue.component('Navbar', {
-  template: `<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  template: `<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="/" > Grocery Store V2 </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

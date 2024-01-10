@@ -33,6 +33,7 @@ MarkupSafe==2.1.2
 passlib==1.7.4
 Pillow==10.1.0
 prompt-toolkit==3.0.40
+psycopg2-binary==2.9.9
 pyexcel==0.7.0
 pyexcel-io==0.6.6
 pyexcel-webio==0.1.4
