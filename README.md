@@ -11,7 +11,7 @@ pip install -r requirements.txt
 python upload_initial_data.py
 
 3. Start the Flask server:
-python app.py
+flask run
 
 4. Visit `localhost` in your browser to access the grocery store application.
 
