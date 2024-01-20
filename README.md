@@ -5,10 +5,13 @@ This project is a sophisticated multi-user grocery store web application that se
 ## Installation
 
 1. Install required dependencies:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
+
+2. Set up Environment Variables:
+`export DATABASE_URL=sqlite:///database.sqlite3`
 
 2. Create a SQLite3 database by running:
-python upload_initial_data.py
+`python upload_initial_data.py`
 
 3. Start the Flask server:
 flask run
