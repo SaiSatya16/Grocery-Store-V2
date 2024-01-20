@@ -18,6 +18,28 @@ flask run
 
 4. Visit `localhost` in your browser to access the grocery store application.
 
+## Usage
+Login as an admin to manage categories and approve manager requests. Login as a manager to manage products within approved categories. Login as a customer to shop and place orders.
+- **Admin Credentials**:
+    - **Email**: admin@gmail.com
+    - **Password**: admin
+- **Manager Credentials**:
+    - **Email**: manager@gmail.com
+    - **Password**: manager
+- **Customer Credentials**:
+    - **Email**: customer@gmail.com
+    - **Password**: customer
+
+- you cam also create your own account and login.
+- you can register as a manager and wait for admin approval.
+- you can register as a customer and start shopping.
+
+
+
+
+
+
+
 ## Description
 
 This application is designed to provide a comprehensive and seamless grocery shopping experience. It merges frontend and backend technologies to ensure smooth interactions for users, admins, and managers.
