@@ -17,7 +17,7 @@ const Customerhome = Vue.component("customerhome", {
               <div class="col-sm-3" v-for="category in filteredCategories" :key="category.id">
               <div v-if= "category.active === true"> 
                 <div class="card">
-                  <img :src="category.image"  class="card-img-top" :alt="category.name">
+                  <img :src="category.image"  class="card-img-top" :alt="category.name"  style="width: 300px; height: 300px;">
                   <div class="card-body">
                     <h5 class="card-title">{{ category.name }}</h5>
                     <p class="card-text">Exciting Offers on {{ category.name }}</p>

@@ -23,7 +23,7 @@ const CustomerProductDetails = Vue.component("customerproductdetails", {
             <div class="row mt-5">
               <div class="col-sm-4" v-for="product in filteredProducts" :key="product.id" v-if="product.display !== false">
                 <div class="card">
-                  <img :src="product.image" class="card-img-top" alt="Product Image">
+                  <img :src="product.image" class="card-img-top" alt="Product Image" style="width: 300px; height: 300px;" >
                   <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">At ₹{{ product.rate }} only </p>

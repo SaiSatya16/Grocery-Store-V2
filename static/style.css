@@ -1,0 +1,271 @@
+.text-success-lighter {
+  color: #6ebf67; /* Adjust this color code to your desired lighter shade of green */
+}
+
+/* Lighter shade of red for non-vegetarian items */
+.text-danger-lighter {
+  color: #ff9999; /* Adjust this color code to your desired lighter shade of red */
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #dddee9;
+    }
+
+
+
+.jumbotron {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* .list-group-item {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+} */
+
+
+
+    h1, h2, h3 {
+      margin-bottom: 5px;
+    }
+    th, td {
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    ul {
+      margin-bottom: 10px;
+    }
+    .thank-you {
+            text-align: center;
+            font-size: 36px;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            border-radius: 50%;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                top: 0;
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+                transform: rotate(360deg) scale(0);
+            }
+        }
+
+    /* Style for price section */
+.price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4c4caf; /* Green color for price */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Styling for buttons */
+.btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Colors and hover effects for buttons */
+.btn-outline-secondary {
+    color: #888;
+    border-color: #888;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #888;
+    color: white;
+}
+
+.btn-outline-danger {
+    color: #FF5722; /* Orange color for danger buttons */
+    border-color: #FF5722;
+}
+
+.btn-outline-danger:hover {
+    background-color: #FF5722;
+    color: white;
+}
+
+.btn-outline-primary {
+    color: #03A9F4; /* Blue color for primary buttons */
+    border-color: #03A9F4;
+}
+
+.btn-outline-primary:hover {
+    background-color: #03A9F4;
+    color: white;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #ffffff; /* Navbar background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    padding: 5px 10px; /* Top and bottom padding */
+    border-radius: 10px; /* Rounded corners for the navbar */
+  }
+  
+  .navbar-brand {
+    font-size: 25px; /* Navbar brand font size */
+    font-weight: bold; /* Navbar brand font weight */
+    color: #333333; /* Navbar brand color */
+  }
+  
+  .navbar-toggler {
+    border: none; /* Remove border from the toggler */
+    color: #333333; /* Toggler color */
+  }
+  
+  .navbar-toggler:focus {
+    outline: none; /* Remove outline on focus */
+  }
+  
+  .nav-item {
+    margin-right: 10px; /* Spacing between navbar items */
+  }
+  
+  /* Navbar link styles */
+  .nav-link {
+    color: #333333; /* Navbar link color */
+    font-weight: 500; /* Navbar link font weight */
+    transition: color 0.3s ease; /* Transition effect for color change */
+    border-radius: 5px; /* Rounded corners for navbar links */
+    padding: 8px 15px; /* Padding around navbar links */
+  }
+  
+  .nav-link:hover {
+    color: #007bff; /* Change color on hover */
+    background-color: #f5f5f5; /* Background color on hover */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  /* Active link style */
+  .nav-link.active {
+    color: #007bff; /* Color for active link */
+  }
+  
+  /* Collapse styles */
+  .collapse.navbar-collapse {
+    justify-content: flex-end; /* Align items to the right */
+  }
+
+  /* Custom CSS for smoother collapse animation */
+.collapse {
+    transition: height 1.0s ease; /* Adjust the animation speed and easing */
+  }
+  
+  /* Optionally, add the following class to override the "show" class for smooth expansion */
+  .collapsing {
+    transition: none; /* Disable transition during the initial collapse state */
+  }
+
+
+  /* Example custom styles for caret-down and caret-up */
+/* Customize these styles according to your UI design */
+
+/* Caret down */
+.fa-caret-down {
+  /* Your styles for the caret down icon */
+  /* For example: */
+  transform: rotate(0deg); /* Default position */
+  transition: transform 0.3s ease; /* Transition effect */
+}
+
+/* Caret up */
+.fa-caret-up {
+  /* Your styles for the caret up icon */
+  /* For example: */
+  transform: rotate(180deg); /* Rotate 180 degrees */
+  transition: transform 0.3s ease; /* Transition effect */
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Adjust border-radius as needed */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  /* Other card styling properties */
+}
+
+.card-body {
+  padding: 20px;
+  /* Other card body styling properties */
+}
+
+.list-group-item {
+  border-radius: 10px;
+  background-color: #ffffff; /* Adjust list item background color */
+  /* Other list item styling properties */
+}
+
+.custom-container {
+  max-width: 8000px; /* Change this value according to your layout requirements */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Add this CSS to your existing stylesheet or in a <style> tag */
+/* Add this CSS to your existing stylesheet or in a <style> tag */
+
+/* Add this CSS to your existing stylesheet or in a <style> tag */
+.view-cart-btn {
+  position: fixed;
+  bottom: 20px; /* Adjust this value to create space from the bottom */
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999; /* Ensure it's above other elements */
+}
+
+.view-cart-btn button {
+  /* Optional: Adjust button styles */
+  /* For example: */
+  width: 1200px; /* Set a specific width if desired */
+  max-width: 100%; /* Set a maximum width if desired */
+  margin: 0 auto; /* Center the button */
+
+
+}
+
+
+
+
+  
