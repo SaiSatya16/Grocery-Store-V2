@@ -14,7 +14,7 @@ This project is a sophisticated multi-user grocery store web application that se
 `python upload_initial_data.py`
 
 3. Start the Flask server:
-flask run
+`flask run`
 
 4. Visit `localhost` in your browser to access the grocery store application.
 
