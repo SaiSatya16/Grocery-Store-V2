@@ -71,7 +71,7 @@ To test emails in development, you can use Mail-Hog. To install Mail-Hog, Browse
 ##Screenshots
 
 - **Admin Home Page**:
-![Admin Home Page](![Alt text](static/Screenshots/admin.png))
+![Admin Home Page](static/Screenshots/admin.png)
 
 
 
