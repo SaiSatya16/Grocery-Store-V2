@@ -4,19 +4,25 @@ This project is a sophisticated multi-user grocery store web application that se
 
 ## Installation
 
-1. Install required dependencies:
+1. Create a virtual environment:
+`python3 -m venv venv`
+
+2. Activate the virtual environment:
+`source venv/bin/activate`
+
+3. Install required dependencies:
 `pip install -r requirements.txt`
 
-2. Set up Environment Variables:
+4. Set up Environment Variables:
 `export DATABASE_URL=sqlite:///database.sqlite3`
 
-2. Create a SQLite3 database by running:
+5. Create a SQLite3 database by running:
 `python upload_initial_data.py`
 
-3. Start the Flask server:
+6. Start the Flask server:
 `flask run`
 
-4. Visit `localhost` in your browser to access the grocery store application.
+7. Visit `localhost` in your browser to access the grocery store application.
 
 ## Usage
 Login as an admin to manage categories and approve manager requests. Login as a manager to manage products within approved categories. Login as a customer to shop and place orders.
