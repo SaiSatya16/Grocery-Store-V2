@@ -6,11 +6,11 @@ const Navbar = Vue.component('Navbar', {
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active d-lg-block" v-if="['Admin', 'Manager', 'Customer'].includes(role)"><router-link to="/">Home</router-link></a>
-      <a class="nav-item nav-link d-lg-block" v-if="['Admin', 'Manager', 'Customer'].includes(role)"><router-link to="/about">About Us</router-link></a>
-      <a class="nav-item nav-link d-lg-block" v-if="['Admin'].includes(role)"><router-link to="/users">Users</router-link></a>
-      <a class="nav-item nav-link d-lg-block" v-if="['Customer'].includes(role)"> <router-link  to="/your_account">Your Account</router-link></a>
-      <a class="nav-item nav-link d-lg-block" v-if="['Customer'].includes(role)"> <router-link  to="/cart">Your Cart</router-link></a>
+      <button class="nav-item nav-link active d-lg-block" v-if="['Admin', 'Manager', 'Customer'].includes(role)"><router-link class="nav-item nav-link active d-lg-block" to="/">Home</router-link></button>
+      <button class="nav-item nav-link active d-lg-block" v-if="['Admin', 'Manager', 'Customer'].includes(role)"><router-link class="nav-item nav-link active d-lg-block" to="/about">About Us</router-link></button>
+      <button class="nav-item nav-link active d-lg-block" v-if="['Admin'].includes(role)"><router-link class="nav-item nav-link active d-lg-block" to="/users">Users</router-link></button>
+      <button class="nav-item nav-link active d-lg-block" v-if="['Customer'].includes(role)"> <router-link class="nav-item nav-link active d-lg-block" to="/your_account">Your Account</router-link></button>
+      <button class="nav-item nav-link active d-lg-block" v-if="['Customer'].includes(role)"> <router-link class="nav-item nav-link active d-lg-block" to="/cart">Your Cart</router-link></button>
         <button class="nav-link" @click='logout'>Logout</button>
       </a>
     </div>
