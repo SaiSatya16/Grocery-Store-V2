@@ -2,6 +2,13 @@
 
 This project is a sophisticated multi-user grocery store web application that seamlessly integrates Vue.js for the frontend and Flask for the backend. Bootstrap ensures an intuitive, user-friendly interface, allowing for dynamic category and product management.
 
+- [Grocery Store Web Application](#grocery-store-web-application)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Background Job Execution](#background-job-execution)
+  - [Description](#description)
+  - [Architecture and Features](#architecture-and-features)
+
 ## Installation
 
 1. Create a virtual environment:
@@ -58,7 +65,7 @@ then run the following commands:
 This will start the celery worker and celery beat.
 
 
-To test emails in development, you can use Mail-Hog. To install Mail-Hog, browse to the Mail-Hog Github Repository and follow the installation instructions for your operating system. Once installed, run Mail-Hog and visit `localhost:8025` in your browser to view emails sent by the application.
+To test emails in development, you can use Mail-Hog. To install Mail-Hog, Browse to the [Mail-Hog GitHub Repository](https://github.com/mailhog/MailHog) and follow the installation instructions for your operating system. Once installed, run Mail-Hog and visit `localhost:8025` in your browser to view emails sent by the application.
 
 ## Description
 
