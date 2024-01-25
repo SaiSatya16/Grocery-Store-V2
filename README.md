@@ -41,6 +41,13 @@ Login as an admin to manage categories and approve manager requests. Login as a 
 - you can register as a customer and start shopping.
 
 ## Background Job Execution
+
+This application uses Redis and Celery to execute background jobs. To run the application with background job execution, follow these steps:
+
+To test the email notification features such as daily reminder emails and monthly reports, navigate to the `app.py` file and check the `send_email` and `send_report` functions and update the time to your desired time. Then, restart the app 
+
+then run the following commands:
+
 - open a new terminal and run the following command:
     - `redis-server`
 - open a another terminal and run the following command:
@@ -49,7 +56,7 @@ Login as an admin to manage categories and approve manager requests. Login as a 
     - `celery -A app:celery_app beat -l INFO`
 
 This will start the celery worker and celery beat.
-To test the email notification feature, login as an admin and click on the "Send Daily Reminder" button. This will send a reminder email to all customers who have items in their cart. To test the monthly report feature, login as an admin and click on the "Send Monthly Report" button. This will send a monthly report to all managers.
+
 
 To test emails in development, you can use Mail-Hog. To install Mail-Hog, browse to the Mail-Hog Github Repository and follow the installation instructions for your operating system. Once installed, run Mail-Hog and visit `localhost:8025` in your browser to view emails sent by the application.
 
