@@ -67,6 +67,16 @@ This will start the celery worker and celery beat.
 
 To test emails in development, you can use Mail-Hog. To install Mail-Hog, Browse to the [Mail-Hog GitHub Repository](https://github.com/mailhog/MailHog) and follow the installation instructions for your operating system. Once installed, run Mail-Hog and visit `localhost:8025` in your browser to view emails sent by the application.
 
+
+##Screenshots
+
+- **Admin Home Page**:
+![Admin Home Page](![Alt text](static/Screenshots/admin.png))
+
+
+
+
+
 ## Description
 
 This application is designed to provide a comprehensive and seamless grocery shopping experience. It merges frontend and backend technologies to ensure smooth interactions for users, admins, and managers.

@@ -6,9 +6,7 @@ const Managerhome = Vue.component("managerhome", {
          <!-- Welcome Message -->
          <div class="jumbotron">
             <h1 class="display-4">Welcome, {{userRole}}!</h1>
-            <p>You can Add, delete, edit categories.</p>
-            <hr class="my-4">
-            <p>Click on the button below to add a new category.</p>
+            <p>You can Add, delete, edit Products and add categories by admin approval.</p>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Add Category
             </button>

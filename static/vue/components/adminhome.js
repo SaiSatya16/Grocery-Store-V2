@@ -6,8 +6,6 @@ const Adminhome = Vue.component("adminhome", {
           <div class="jumbotron">
              <h1 class="display-4">Welcome, {{userRole}}!</h1>
              <p>You can Add, delete, edit categories.</p>
-             <hr class="my-4">
-             <p>Click on the button below to add a new category.</p>
              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
              Add Category
              </button>
