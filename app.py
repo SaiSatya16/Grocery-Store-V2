@@ -25,36 +25,36 @@ from psycopg2 import *
 #==============================configuration===============================
 
 
-# app = Flask(__name__)
-# app.config.from_object(DevelopmentConfig)
-# #app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.sqlite3"
-# CORS(app)
-# api.init_app(app)
-# db.init_app(app)
-# excel.init_excel(app)
+app = Flask(__name__)
+app.config.from_object(DevelopmentConfig)
+#app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.sqlite3"
+CORS(app)
+api.init_app(app)
+db.init_app(app)
+excel.init_excel(app)
 
-# app.security = Security(app, datastore)
+app.security = Security(app, datastore)
 
-# app.app_context().push()
+app.app_context().push()
 
-# celery_app = celery_init_app(app)
+celery_app = celery_init_app(app)
 
-def create_app():
-    app = Flask(__name__)
-    app.config.from_object(DevelopmentConfig)
-    CORS(app)
-    api.init_app(app)
-    db.init_app(app)
-    excel.init_excel(app)
-    app.security = Security(app, datastore)
+# def create_app():
+#     app = Flask(__name__)
+#     app.config.from_object(DevelopmentConfig)
+#     CORS(app)
+#     api.init_app(app)
+#     db.init_app(app)
+#     excel.init_excel(app)
+#     app.security = Security(app, datastore)
 
-    app.app_context().push()
+#     app.app_context().push()
 
-    celery_app = celery_init_app(app)
+#     celery_app = celery_init_app(app)
 
-    return app, celery_app
+#     return app, celery_app
 
-app,celery_app = create_app()
+# app,celery_app = create_app()
 
 
 
@@ -354,3 +354,6 @@ def send_report(sender, **kwargs):
 
 
 
+if __name__ == '__main__':
+    app.run()
+    
