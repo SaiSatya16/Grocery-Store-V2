@@ -25,19 +25,19 @@ from psycopg2 import *
 #==============================configuration===============================
 
 
-# app = Flask(__name__)
-# app.config.from_object(DevelopmentConfig)
+# application = Flask(__name__)
+# application.config.from_object(DevelopmentConfig)
 # #app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.sqlite3"
-# CORS(app)
-# api.init_app(app)
-# db.init_app(app)
-# excel.init_excel(app)
+# CORS(application)
+# api.init_app(application)
+# db.init_app(application)
+# excel.init_excel(application)
 
-# app.security = Security(app, datastore)
+# application.security = Security(application, datastore)
 
-# app.app_context().push()
+# application.app_context().push()
 
-# celery_app = celery_init_app(app)
+# celery_app = celery_init_app(application)
 
 def create_app():
     app = Flask(__name__)
@@ -351,9 +351,4 @@ def send_report(sender, **kwargs):
 
 
 
-
-
-
-# if __name__ == '__main__':
-#     app.run()
     
