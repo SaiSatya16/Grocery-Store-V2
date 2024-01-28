@@ -7,7 +7,7 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:satya1610@grocery-store.cb4m2868y6lk.ap-south-1.rds.amazonaws.com:5432/grocerystoredb'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SECRET_KEY = "thisissecter1"
     SECURITY_PASSWORD_SALT = "thisissaltt1"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
