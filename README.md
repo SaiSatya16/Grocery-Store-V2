@@ -2,6 +2,8 @@
 
 This project is a sophisticated multi-user grocery store web application that seamlessly integrates Vue.js for the frontend and Flask for the backend. Bootstrap ensures an intuitive, user-friendly interface, allowing for dynamic category and product management.
 
+Browse to the [Satya Grocery Store Web Application](http://satya-grocery-store.ap-south-1.elasticbeanstalk.com/) to view the deployed application.
+
 - [Grocery Store Web Application](#grocery-store-web-application)
   - [Installation](#installation)
   - [Usage](#usage)
