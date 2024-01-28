@@ -30,7 +30,7 @@ This project is a sophisticated multi-user grocery store web application that se
 6. Start the Flask server:
 `flask run`
 
-7. Visit `localhost` in your browser to access the grocery store application.
+7. Visit `localhost:5000` in your browser to access the grocery store application.
 
 ## Usage
 Login as an admin to manage categories and approve manager requests. Login as a manager to manage products within approved categories. Login as a customer to shop and place orders.
