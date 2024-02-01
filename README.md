@@ -61,7 +61,7 @@ then run the following commands:
 - open a new terminal and run the following command:
     - `redis-server`
 - open a another terminal and run the following command:
-    - `celery -A app.celery worker --loglevel=info`
+    - `celery -A app:celery_app worker --loglevel INFO`
 - open one terminal and run the following commands:
     - `celery -A app:celery_app beat -l INFO`
 
