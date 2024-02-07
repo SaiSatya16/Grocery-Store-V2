@@ -179,7 +179,7 @@ class Category_Api(Resource):
     @roles_required('Admin')
     @auth_required('token')
     def delete(self, id):
-        ALLOWED_IMAGE_FORMATS = ['jpg', 'jpeg', 'png', 'gif']  # Add more formats as needed
+        ALLOWED_IMAGE_FORMATS = ['jpg', 'jpeg', 'png', 'gif']
         deleted_formats = []
 
         # Attempt to delete images
@@ -192,31 +192,44 @@ class Category_Api(Resource):
         # Check if any images were deleted
         if deleted_formats:
             # Additional deletion logic for Category and related products
-            C1 = Category.query.get(id)
-            if C1 is not None:
-                p1 = C1.product_relation 
-                for i in p1:
+            category = Category.query.get(id)
+
+            if category:
+                for product in category.product_relation:
+                   
                     for img_format in ALLOWED_IMAGE_FORMATS:
-                        img_path = f'static/uploads/{i.id}_pro_image.{img_format}'
+                        img_path = f'static/uploads/{product.id}_pro_image.{img_format}'
                         if os.path.exists(img_path):
                             os.remove(img_path)
-                            deleted_formats.append(img_format)
-                    db.session.delete(i)
-                db.session.delete(C1)
+
+                # Delete the related products first
+                db.session.query(Association).filter_by(category_id=id).delete()
+                db.session.query(Product).filter_by(category_id=id).delete()
+                
+
+                # Now you can safely delete the category
+                db.session.delete(category)
                 db.session.commit()
+
                 return f"Deleted images of formats: {', '.join(deleted_formats)} and Category", 201
 
         # If no images were found to delete, proceed to delete only the category
-        C1 = Category.query.get(id)
-        if C1 is not None:
-            p1 = C1.product_relation 
-            for i in p1:
-                db.session.delete(i)
-            db.session.delete(C1)
+        category = Category.query.get(id)
+        if category:
+            
+            # Delete the related products first
+            db.session.query(Association).filter_by(category_id=id).delete()
+            db.session.query(Product).filter_by(category_id=id).delete()
+
+            # Now you can safely delete the category
+            db.session.delete(category)
             db.session.commit()
+
             return "Deleted Category", 201
 
         return NotFoundError(status_code=404)
+
+
 
 #=================================Product api======================================================
 class Product_Api(Resource):

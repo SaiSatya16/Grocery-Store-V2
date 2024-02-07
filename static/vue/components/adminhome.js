@@ -35,19 +35,19 @@ const Adminhome = Vue.component("adminhome", {
                          <img :src="category.image" alt="Category Image" style="max-width: 50px; max-height: 50px;" />
                       </td>
                       <td>
-                         <button v-if="category.active" type="button" class="card-link" @click="viewproducts(category.id)">
+                         <button v-if="category.active" class="btn btn-sm btn-outline-primary" type="button" @click="viewproducts(category.id)">
                          View Products
                          </button>
-                         <button v-if="category.active" type="button" class="card-link" :data-bs-target="'#editModal' + category.id" data-bs-toggle="modal">
+                         <button v-if="category.active" type="button" class="btn btn-sm btn-outline-secondary" :data-bs-target="'#editModal' + category.id" data-bs-toggle="modal">
                          Edit 
                          </button>
-                         <button v-if="category.active" type="button" class="card-link" @click="deletecategory(category.id)">
+                         <button v-if="category.active" type="button" class="btn btn-sm btn-outline-danger" @click="deletecategory(category.id)">
                          Delete
                          </button>
-                         <button v-if="!category.active " class="btn btn-primary" @click="approve(category.id)">
+                         <button v-if="!category.active " class="btn btn-sm btn-outline-primary" @click="approve(category.id)">
                         Activate
                         </button>
-                        <button v-if="category.active " class="btn btn-danger" @click="disapprove(category.id)">
+                        <button v-if="category.active " class="btn btn-sm btn-outline-danger" @click="disapprove(category.id)">
                         Deactivate
                         </button>
                       </td>

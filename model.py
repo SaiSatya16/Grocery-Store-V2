@@ -48,7 +48,7 @@ class Product(db.Model):
 class Cart(db.Model):
     id = db.Column(db.Integer, primary_key=True,autoincrement = True)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    product_id=db.Column(db.Integer, db.ForeignKey("product.id"), nullable=False)
+    product_id=db.Column(db.Integer, nullable=False)
     product_name=db.Column(db.String(100), nullable=False)
     req_quantity = db.Column(db.Integer,nullable = False)
     product_rate=db.Column(db.Integer, nullable=False)
@@ -58,7 +58,7 @@ class Bought(db.Model):
     id = db.Column(db.Integer, primary_key=True,autoincrement = True)
     date = db.Column(db.String(100), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    product_id=db.Column(db.Integer, db.ForeignKey("product.id"), nullable=False)
+    product_id=db.Column(db.Integer, nullable=False)
     product_name=db.Column(db.String(100), nullable=False)
     req_quantity = db.Column(db.Integer,nullable = False)
     product_rate=db.Column(db.Integer, nullable=False)
